@@ -33,10 +33,11 @@ Usage
 **Create Rule**
 
 Endpoint: POST /create_rule Payload:
-{
-  "rule": "age > 30 AND salary > 50000"
-}
-
+```bash
+   {
+     "rule": "age > 30 AND salary > 50000"
+   }
+```
 **Response:**
 
 {
