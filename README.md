@@ -39,7 +39,7 @@ Endpoint: POST /create_rule Payload:
    }
 ```
 **Response:**
-
+``` bash
 {
   "type": "operator",
   "value": "AND",
@@ -52,27 +52,32 @@ Endpoint: POST /create_rule Payload:
     "value": "salary > 50000"
   }
 }
+```
 ****************************************************
 **Combine Rules**
 Endpoint: POST /combine_rules Payload:
+```bash
 {
   "rules": [
     "age > 30 AND salary > 50000",
     "age < 25 AND department = 'Marketing'"
   ]
 }
-
+```
 Response:
+```bash
 {
   "type": "operator",
   "value": "OR",
   "left": { ... },
   "right": { ... }
 }
-
+```
 ****************************************************
 **Evaluate Rule**
+
 Endpoint: POST /evaluate_rule Payload:
+```bash
 {
   "ast": {
     "type": "operator",
@@ -91,10 +96,10 @@ Endpoint: POST /evaluate_rule Payload:
     "salary": 60000
   }
 }
-
+```
 **Response:**
-
+```bash
 {
   "result": true
 }
-
+```
